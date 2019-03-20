@@ -1,0 +1,59 @@
+ .close {
+        font-size: 20;
+        color: rgb(226, 229, 229);
+        margin: 15 0 0 15;
+    }
+    .tagline{
+        height: 18;
+        background: #00bcd4;
+        font-size: 11;
+        font-weight: bold;
+        padding-bottom: 1;
+    }
+    .card-img {
+        width: 100%;
+        margin-bottom: 5;
+    }
+
+    .card-img-thumb {
+        background-color: #828282;
+        vertical-align: center;
+        border-radius: 5;
+        width: 130;
+        height: 80;
+        margin-left: 5;
+    }
+
+    
+
+    @keyframes show {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.dialogOpen .content {
+    opacity: 0.2;
+}
+.dialogOpen .dialog-wrapper {
+    visibility: visible;
+    animation-name: show;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+.dialog-wrapper {
+    visibility: collapse;
+    opacity: 0;
+}
+
+.dialog {
+    border-width: 1 0 1 0;
+    border-color: black;
+    background-color: white;
+    width: 100%;
+    margin-top: 100;
+    padding: 20;
+}
+.dialog Label {
+    margin: 0 15 15 15;
+    color: black;
+}

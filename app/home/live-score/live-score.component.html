@@ -1,0 +1,98 @@
+<GridLayout rows="auto,auto,auto,auto,auto,auto" columns="auto" class="content">
+        <GridLayout *ngIf="item" class="anim-itemInfo" marginTop="15" row="1"
+            width="100%" columns="auto,*" rows="auto,auto,auto,auto"
+            verticalAlignment="center">
+            <Label [text]="categoryIcon() " row="0" col="0" rowSpan="2"
+                [backgroundColor]="item.categoryTag" class="fa category-icon"></Label>
+            <Label row="0" col="1" class="cr-name" textwrap="true"
+                verticalAlignment="bottom" horizontalAlignment="left" [text]="item.name"></Label>
+            <Label row="1" col="1" class="cr-category" textwrap="true"
+                verticalAlignment="top" horizontalAlignment="left" [text]="item.category"></Label>
+            <Label row="2" col="1" class="cr-place" [text]="item.place"></Label>
+            <StackLayout row="3" col="1" orientation="horizontal">
+                <Label class="cr-time" [text]="item.time"></Label>
+            </StackLayout>
+        </GridLayout>
+        <FlexboxLayout row="3" class="m-t-10 m-b-10 anim-likes" flexDirection="row"
+            justifyContent="space-between" width="100%">
+            <StackLayout class="cr-score" borderRadius="5" width="20%">
+                <Image [src]="item.team_flag" borderTopLeftRadius="4"
+                    borderTopRightRadius="4" stretch="aspectFill" width="80"
+                    height="60"></Image>
+                <Label class="text-center text-uppercase" [text]="item.team"></Label>
+            </StackLayout>
+            <StackLayout class="p-l-5 cr-score-line" width="30%">
+                <Label class="text-left cr-score-text" fontSize="14" text="{{item.team_run}}/{{item.team_wic}}"></Label>
+                <Label class="text-left" fontSize="10" text="(overs: {{item.team_over}})"></Label>
+                <Label class="text-left text-uppercase cr-score-text"
+                    fontSize="10" textWrap="true" text="v kohli*"></Label>
+                <Label class="text-left" fontSize="7" text="(50 from 20 balls)"></Label>
+                <Label class="text-left text-uppercase cr-score-text"
+                    fontSize="10" textWrap="true" text="m dhoni*"></Label>
+                <Label class="text-left" fontSize="7" text="(30 from 40 balls)"></Label>
+
+            </StackLayout>
+            <StackLayout class="p-r-5" width="30%">
+                <FlexboxLayout flexDirection="row" justifyContent="space-between"
+                    width="100%">
+                    <Image height="20" width="20" stretch="aspectFit" class="anim-icons"
+                        src="https://www.theislandwiki.org/images/thumb/8/8d/Cricketicon.png/100px-Cricketicon.png"></Image>
+                    <Label class="text-right cr-score-text" fontSize="14"
+                        text="{{item.oppo_team_run}}/{{item.oppo_team_wic}}"></Label>
+                </FlexboxLayout>
+
+                <Label class="text-right" fontSize="10" text="(overs: {{item.oppo_team_over}})"></Label>
+                <Label class="text-right text-uppercase cr-score-text"
+                    fontSize="10" textWrap="true" text="Tim Seifert"></Label>
+                <Label class="text-right" fontSize="7" text="(38 from 20 balls)"></Label>
+                <Label class="text-right text-uppercase cr-score-text"
+                    fontSize="10" textWrap="true" text="Colin Munro"></Label>
+                <Label class="text-right" fontSize="7" text="(20 from 25 balls)"></Label>
+            </StackLayout>
+            <StackLayout class="cr-score" borderRadius="5" width="20%">
+                <Image [src]="item.oppo_team_flag" borderTopLeftRadius="4"
+                    borderTopRightRadius="4" stretch="aspectFill" width="80"
+                    height="60"></Image>
+                <Label class="text-center text-uppercase" [text]="item.oppo_team"></Label>
+            </StackLayout>
+        </FlexboxLayout>
+        <FlexboxLayout row="4" class="m-t-10 m-b-10 anim-likes" flexDirection="row"
+            justifyContent="space-between" width="100%">
+            <Image height="20" width="20" stretch="aspectFit" class="anim-icons"
+                src="https://www.freeiconspng.com/minicovers/cricket-ball-png-9.png"></Image>
+            <StackLayout class="p-r-5" width="50%">
+                <Label class="text-center text-uppercase cr-score-text"
+                    fontSize="10" textWrap="true" text="Hardik Pandya*"></Label>
+
+                <Label class="text-center" fontSize="8" text="(3.5 overs 25 runs 3 wickets)"></Label>
+            </StackLayout>
+            <StackLayout class="p-r-5" width="50%">
+                <Label class="text-center text-uppercase cr-score-text"
+                    fontSize="10" textWrap="true" text="Bhuvneshwar Kumar"></Label>
+
+                <Label class="text-center" fontSize="8" text="(4 overs 35 runs 4 wickets)"></Label>
+            </StackLayout>
+        </FlexboxLayout>
+        <GridLayout *ngIf="item" columns="auto,*,auto,auto" rows="auto"
+            marginTop="5" width="100%" row="5" class="anim-likes">
+            <GridLayout col="0" rows="auto" columns="auto,auto" (tap)="toggleLike(item)">
+                <Label col="0" row="0" #like [class]="item.isLike ? 'fa like-icon liked-active' : 'fa like-icon default'"
+                    [text]="item.isLike ? '&#xf164;':'&#xf087;'"></Label>
+                <Label col="1" row="0" class="layout" [text]="item.likes"></Label>
+            </GridLayout>
+            <StackLayout col="1" orientation="horizontal" marginLeft="15">
+                <Label ref="" class="like-icon layout fa" text="&#xf0e5;"></Label>
+                <Label class="layout" [text]="item.comments"></Label>
+            </StackLayout>
+            <GridLayout col="2" rows="auto" columns="auto,auto" (tap)="toggleHeart(item)"
+                marginRight="15">
+                <Label col="0" row="0" #favorite [class]="item.isFavorite ? 'like-icon fa heart-active' : 'like-icon fa default'"
+                    [text]="item.isFavorite ? '&#xf004;':'&#xf08a;'"></Label>
+                <Label col="1" row="0" class="layout" text="Favorite"></Label>
+            </GridLayout>
+            <StackLayout col="3" orientation="horizontal">
+                <Label ref="" class="like-icon layout fa" text="&#xf045;"></Label>
+                <Label class="layout" text="Share"></Label>
+            </StackLayout>
+        </GridLayout>
+    </GridLayout>

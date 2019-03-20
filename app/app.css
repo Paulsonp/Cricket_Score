@@ -1,0 +1,195 @@
+/*
+In NativeScript, the app.css file is where you place CSS rules that
+you would like to apply to your entire application. Check out
+http://docs.nativescript.org/ui/styling for a full list of the CSS
+selectors and properties you can use to style UI components.
+
+/*
+For example, the following CSS rule changes the font size of all UI
+components that have the btn class name.
+*/
+.btn {
+    font-size: 18;
+}
+
+/*
+In many cases you may want to use the NativeScript core theme instead
+of writing your own CSS rules. For a full list of class names in the theme
+refer to http://docs.nativescript.org/ui/theme.
+*/
+@import '~nativescript-theme-core/css/core.light.css';
+
+/* START CSS ANIMATION */
+ .anim-page {
+        background-color: #d4d6d8;
+        animation-name: key-page;
+        animation-duration: 2;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    @keyframes key-page {
+        0% {
+            background-color: #dadada;
+        }
+
+        20% {
+            background-color: #dbd2d5;
+        }
+
+        100% {
+            background-color: white;
+        }
+    }
+
+    .anim-cover {
+        opacity: 0;
+        animation-name: key-cover;
+        animation-duration: 1;
+        animation-delay: 0.5;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    @keyframes key-cover {
+        0% {
+            opacity: 0;
+            transform: translate(0, 550) scale(0, 0);
+            animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        30% {
+            opacity: 0.5;
+            transform: scale(0.6, 0.6);
+            animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translate(0, 0) scale(1, 1);
+            animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+    }
+
+    .anim-images {
+        opacity: 0;
+        animation-name: key-images;
+        animation-duration: 1;
+        animation-delay: 0.7;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    @keyframes key-images {
+        0% {
+            opacity: 0;
+            transform: translate(0, 550) scale(0, 0);
+            animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        30% {
+            opacity: 0.5;
+            transform: scale(0.6, 0.6);
+            animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translate(0, 0) scale(1, 1);
+            animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+    }
+
+ 
+
+    .anim-likes {
+        opacity: 0;
+        animation-name: key-likes;
+        animation-duration: 1;
+        animation-delay: 1.5;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    @keyframes key-likes {
+        0% {
+            opacity: 0;
+            transform: translate(50, 50);
+            animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translate(0, 0);
+            animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+    }
+
+    .anim-content {
+        opacity: 0;
+        animation-name: key-content;
+        animation-duration: 1;
+        animation-delay: 1.8;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    @keyframes key-content {
+        0% {
+            opacity: 0;
+            transform: translate(50, 50);
+            animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translate(0, 0);
+            animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+    }
+     .anim-icons {
+        animation-name: blink;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+     .anim-text {
+        animation-name: blink;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    @keyframes blink{
+0%{opacity: 0;}
+50%{opacity: .5;}
+100%{opacity: 1;}
+}
+ .anim-itemInfo {
+        opacity: 0;
+        animation-name: key-itemInfo;
+        animation-duration: 1;
+        animation-delay: 1.2;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+   @keyframes key-itemInfo {
+        0% {
+            opacity: 0;
+            transform: translate(50, 50);
+            animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translate(0, 0);
+            animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+    }
+
+/* END CSS ANIMATION */
+   

@@ -1,0 +1,120 @@
+.cr-name {
+  font-size: 13;
+  font-weight: bold;
+}
+.cr-category {
+  font-size: 12;
+  color: #828282;
+}
+.cr-place {
+  font-size: 11;
+  color: #008394;
+}
+.cr-time {
+  color: #00bcd4;
+  font-size: 10;
+}
+.cr-score {
+  width: 100%;
+  border-color: #008394;
+  border-width: 1;
+}
+.cr-score-text {
+  font-weight: bold;
+}
+.cr-score-line {
+  border-right-color: #008394;
+  border-right-width: 1;
+}
+
+.description-text {
+  font-size: 14;
+  font-weight: bold;
+  color: black;
+}
+
+.description-icon {
+  font-size: 16;
+  font-weight: bold;
+  color: #3e9edb;
+  margin-right: 8;
+  vertical-align: center;
+}
+
+.description-value {
+  font-size: 14;
+  color: black;
+}
+
+.liked-active {
+  color: #4080ff;
+}
+
+.heart-active {
+  color: #b51213;
+}
+
+.default {
+  color: #828282;
+}
+
+.layout {
+  vertical-align: bottom;
+  color: #828282;
+  font-size: 14;
+  height: 30;
+  padding: 5 0 5 0;
+}
+
+.like-icon {
+  vertical-align: bottom;
+  height: 30;
+  font-size: 16;
+  margin-right: 2;
+  padding: 5 5 5 5;
+}
+
+.category-icon {
+  text-align: center;
+  padding-top: 5;
+  color: white;
+  vertical-align: center;
+  font-size: 25;
+  border-width: 1;
+  border-color: #ffffff;
+  border-radius: 50%;
+  margin-top: 4;
+  margin-right: 15;
+  width: 40;
+  height: 40;
+}
+
+.content {
+  margin-left: 16;
+  margin-right: 16;
+}
+
+.line {
+  height: 0.5;
+  border: none;
+  color: #e0e0e0;
+  background-color: #e0e0e0;
+}
+
+.lineBreak {
+  height: 0.5;
+  border: none;
+  color: #e0e0e0;
+  background-color: #e0e0e0;
+}
+
+.pager-item {
+}
+.pager-item label {
+  font-size: 20;
+}
+
+.pager-item image {
+  border-radius: 50%;
+  border-width: 1;
+}

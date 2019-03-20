@@ -1,0 +1,72 @@
+<StackLayout class="main" verticalAlignment="top">
+  <GridLayout class="anim-cover" rows="auto" columns="*" backgroundColor="#F5F5F5">
+    <Image row="0" col="0" marginTop="40" height="150" stretch="aspectFill" class="card-img" [src]="item.cover"></Image>
+    <FlexboxLayout
+      verticalAlignment="top"
+      row="0"
+      col="0"
+      flexDirection="row"
+      justifyContent="space-between"
+      backgroundColor="#00bcd4"
+      height="40"
+    >
+      <Label fontSize="15" text="LIVE SCORE" class="fa close"> </Label>
+      <StackLayout>
+        <Label
+          verticalAlignment="bottom"
+          (tap)="openVideoModal()"
+          fontSize="
+                    25"
+          text="&#xf03d;"
+          class="fa close"
+          marginRight="10"
+          marginTop="8"
+        >
+        </Label>
+        <Label
+          verticalAlignment="bottom"
+          fontSize="6"
+          text="LIVE"
+          color="green"
+          class="fa close anim-text"
+          paddingLeft="3"
+          marginTop="-16"
+        >
+        </Label>
+      </StackLayout>
+    </FlexboxLayout>
+    <StackLayout class="tagline m-b-5" opacity=".9" verticalAlignment="bottom" row="0" col="0">
+      <Label class="p-l-5" color="#fff" [text]="item.tagline"></Label>
+    </StackLayout>
+    <GridLayout #videoModal row="0" rows="auto" backgroundColor="rgba(0,0,0,0.7)">
+      <VideoPlayer
+        #vPlayer
+        row="0"
+        src="https://espnfw-a.akamaihd.net/m/1/87146/65/4474305/Abhay15sec_939483_181.mp4"
+        autoplay="true"
+        height="190"
+      >
+      </VideoPlayer>
+      <Label
+        row="0"
+        horizontalAlignment="right"
+        color="#fff"
+        fontSize="25"
+        text="&#xf2d3;"
+        class="fa p-5"
+        (tap)="closeVideoModal(vPlayer)"
+      ></Label>
+    </GridLayout>
+  </GridLayout>
+  <ScrollView class="anim-images" orientation="horizontal">
+    <StackLayout orientation="horizontal" class="">
+      <GridLayout *ngFor="let imageString of item.images" rows="auto" columns="*">
+        <Image class="card-img-thumb" row="0" col="0" [src]="imageString" stretch="aspectFill"></Image>
+      </GridLayout>
+    </StackLayout>
+  </ScrollView>
+
+  <ScrollView orientation="vertical">
+    <LiveScore></LiveScore>
+  </ScrollView>
+</StackLayout>
