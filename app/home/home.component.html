@@ -1,5 +1,5 @@
 <StackLayout class="main" verticalAlignment="top">
-  <GridLayout class="anim-cover" rows="auto" columns="*" backgroundColor="#F5F5F5">
+  <GridLayout rows="auto" columns="*" backgroundColor="#F5F5F5">
     <Image row="0" col="0" marginTop="40" height="150" stretch="aspectFill" class="card-img" [src]="item.cover"></Image>
     <FlexboxLayout
       verticalAlignment="top"
@@ -58,7 +58,7 @@
       ></Label>
     </GridLayout>
   </GridLayout>
-  <ScrollView class="anim-images" orientation="horizontal">
+  <ScrollView  orientation="horizontal">
     <StackLayout orientation="horizontal" class="">
       <GridLayout *ngFor="let imageString of item.images" rows="auto" columns="*">
         <Image class="card-img-thumb" row="0" col="0" [src]="imageString" stretch="aspectFill"></Image>

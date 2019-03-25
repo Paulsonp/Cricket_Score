@@ -1,6 +1,7 @@
 export interface LiveData {
     id: number;
-    name:string,
+    cricket_logo:string,
+    team_name:string,
     place: string,
     time: string,
     category: string;
@@ -10,6 +11,7 @@ export interface LiveData {
     team_run: number,
     team_wic: number,
     team_over: number,
+    oppo_team_name: string,
     oppo_team: string,
     oppo_team_flag: string,
     oppo_team_run: number,

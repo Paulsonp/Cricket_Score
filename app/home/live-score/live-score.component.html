@@ -1,19 +1,21 @@
-<GridLayout rows="auto,auto,auto,auto,auto,auto" columns="auto" class="content">
-        <GridLayout *ngIf="item" class="anim-itemInfo" marginTop="15" row="1"
+<GridLayout rows="auto,auto,auto,auto" columns="auto" class="content">
+        <GridLayout class="" marginTop="15" row="0"
             width="100%" columns="auto,*" rows="auto,auto,auto,auto"
             verticalAlignment="center">
-            <Label [text]="categoryIcon() " row="0" col="0" rowSpan="2"
-                [backgroundColor]="item.categoryTag" class="fa category-icon"></Label>
-            <Label row="0" col="1" class="cr-name" textwrap="true"
-                verticalAlignment="bottom" horizontalAlignment="left" [text]="item.name"></Label>
+            <StackLayout row="0" col="0" rowSpan="4" class="m-r-10 m-b-5">
+                <Image [src]="item?.cricket_logo" height="70" width="70" stretch="aspectFit"></Image>
+            </StackLayout>
+                
+            <Label row="0" col="1" class="cr-name text-uppercase" textwrap="true"
+                 text="{{item.team_name}} vs {{item.oppo_team_name}}"></Label>
             <Label row="1" col="1" class="cr-category" textwrap="true"
-                verticalAlignment="top" horizontalAlignment="left" [text]="item.category"></Label>
+                [text]="item.category"></Label>
             <Label row="2" col="1" class="cr-place" [text]="item.place"></Label>
             <StackLayout row="3" col="1" orientation="horizontal">
                 <Label class="cr-time" [text]="item.time"></Label>
             </StackLayout>
         </GridLayout>
-        <FlexboxLayout row="3" class="m-t-10 m-b-10 anim-likes" flexDirection="row"
+        <FlexboxLayout row="1" class="m-t-10 m-b-10" flexDirection="row"
             justifyContent="space-between" width="100%">
             <StackLayout class="cr-score" borderRadius="5" width="20%">
                 <Image [src]="item.team_flag" borderTopLeftRadius="4"
@@ -56,7 +58,7 @@
                 <Label class="text-center text-uppercase" [text]="item.oppo_team"></Label>
             </StackLayout>
         </FlexboxLayout>
-        <FlexboxLayout row="4" class="m-t-10 m-b-10 anim-likes" flexDirection="row"
+        <FlexboxLayout row="2" class="m-t-10 m-b-10 " flexDirection="row"
             justifyContent="space-between" width="100%">
             <Image height="20" width="20" stretch="aspectFit" class="anim-icons"
                 src="https://www.freeiconspng.com/minicovers/cricket-ball-png-9.png"></Image>
@@ -74,7 +76,7 @@
             </StackLayout>
         </FlexboxLayout>
         <GridLayout *ngIf="item" columns="auto,*,auto,auto" rows="auto"
-            marginTop="5" width="100%" row="5" class="anim-likes">
+            marginTop="5" width="100%" row="3" class="">
             <GridLayout col="0" rows="auto" columns="auto,auto" (tap)="toggleLike(item)">
                 <Label col="0" row="0" #like [class]="item.isLike ? 'fa like-icon liked-active' : 'fa like-icon default'"
                     [text]="item.isLike ? '&#xf164;':'&#xf087;'"></Label>

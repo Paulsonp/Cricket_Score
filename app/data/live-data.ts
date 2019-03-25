@@ -8,7 +8,8 @@ export class LiveService {
     return [
       {
         id: 1,
-        name: 'INDIA vs NEW ZEALAND',
+        cricket_logo:'https://pbs.twimg.com/profile_images/1098124377202327552/juwuMrhX_400x400.png',
+        team_name: 'INDIA',
         category: '3 T20 INTERNATIONAL SERIES, 2019',
         place: 'EDEN PARK, AUCKLAND',
         time: '2ND T20I - 11:30 IST FRI',
@@ -18,6 +19,7 @@ export class LiveService {
         team_run: 210,
         team_wic: 6,
         team_over: 50,
+        oppo_team_name:'NEW ZEALAND',
         oppo_team: 'nz',
         oppo_team_flag: 'https://static2.stuff.co.nz/1412653711/351/10589351.jpg',
         oppo_team_run: 190,
@@ -37,7 +39,8 @@ export class LiveService {
       },
       {
         id: 2,
-        name: 'INDIA vs SRILANKA',
+        cricket_logo:'https://upload.wikimedia.org/wikipedia/en/thumb/2/26/2011_Cricket_World_Cup_Logo.svg/1200px-2011_Cricket_World_Cup_Logo.svg.png',
+        team_name: 'INDIA',
         category: '3 T20 INTERNATIONAL SERIES, 2019',
         place: 'EDEN PARK, AUCKLAND',
         time: '2ND T20I - 11:30 IST FRI',
@@ -47,6 +50,7 @@ export class LiveService {
         team_run: 210,
         team_wic: 6,
         team_over: 50,
+        oppo_team_name:'Srilanka',
         oppo_team: 'nz',
         oppo_team_flag: 'https://static2.stuff.co.nz/1412653711/351/10589351.jpg',
         oppo_team_run: 190,
@@ -66,7 +70,8 @@ export class LiveService {
       },
       {
         id: 3,
-        name: 'INDIA vs AUSTRALIA',
+        cricket_logo:'https://upload.wikimedia.org/wikipedia/en/9/99/2020_ICC_Mens_T20_World_Cup_Logo.png',
+        team_name:'india',
         category: '3 T20 INTERNATIONAL SERIES, 2019',
         place: 'EDEN PARK, AUCKLAND',
         time: '2ND T20I - 11:30 IST FRI',
@@ -76,6 +81,7 @@ export class LiveService {
         team_run: 210,
         team_wic: 6,
         team_over: 50,
+        oppo_team_name:'AUSTRALIA',
         oppo_team: 'nz',
         oppo_team_flag: 'https://static2.stuff.co.nz/1412653711/351/10589351.jpg',
         oppo_team_run: 190,
