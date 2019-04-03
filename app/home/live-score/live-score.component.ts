@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { switchMap } from 'rxjs/operators';
 import { Page } from 'ui/page';
 import { LiveData } from '../../data/live.model';
@@ -13,18 +13,18 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class LiveScoreComponent implements OnInit {
   itemId: number;
-  item: any;
+  _item: any;
   items: Array<LiveData>;
+  @Input() selected;
 
   constructor(private page: Page, private dataService: LiveService) {
     this.items = this.dataService.getLiveData();
     this.page.actionBarHidden = true;
-    this.item = this.items;
-    this.itemId = 1;
-    this.item = this.items.filter(item => item.id == this.itemId)[0];
-    console.log('hai second component', this.item);
+   
   }
-
+  get item(){
+    return  this.items.find(item => item.id == this.selected);
+  }
   ngOnInit(): void {}
 
 }

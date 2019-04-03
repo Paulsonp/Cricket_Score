@@ -16,39 +16,50 @@ registerElement("VideoPlayer", () => Video);
 })
 export class HomeComponent implements OnInit {
     itemId: number;
-    item: Item;
+    _item: Item;
     items: Array<Item>;
     @ViewChild('videoModal') videoMdl: ElementRef;
+    selected= 0;
+    spinner: boolean = false;
 
     constructor(
         private routerExtensions: RouterExtensions,
         private page: Page,
         private dataService: DataService) {
             this.page.actionBarHidden = true;
+            this.spinner= true;
         this.items = this.dataService.getItems();
-        this.itemId = 1;
-        this.item = this.items.filter(item => item.id == this.itemId)[0];
+        // this.itemId = 1;
+        // this.item = this.items.filter(item => item.id == this.itemId)[0];
     }
 
     ngOnInit(): void {
         this.videoMdl.nativeElement.visibility = 'collapsed';
     }
+    get item(){
+        this.spinner= false;
+        return  this.items.find(item => item.id == this.selected);
+      }
     openVideoModal() {
         this.videoMdl.nativeElement.visibility = 'visible';
-        this.videoMdl.nativeElement.animate({
-            opacity: 1,
-            duration: 200
-        });
+        // this.videoMdl.nativeElement.animate({
+        //     opacity: 1,
+        //     duration: 200
+        // });
     }
 
     closeVideoModal(vPlayer: Video) {
-        vPlayer.pause();
-        this.videoMdl.nativeElement.animate({
-            opacity: 0,
-            duration: 200
-        }).then(
-            () => {
+        // vPlayer.pause();
+        // this.videoMdl.nativeElement.animate({
+        //     opacity: 0,
+        //     duration: 200
+        // }).then(
+        //     () => {
                 this.videoMdl.nativeElement.visibility = 'collapsed';
-            });
+            // });
+    }
+    onClick(i){
+        this.selected = i;
+        console.log('image click', i)
     }
 }

@@ -1,4 +1,4 @@
-<GridLayout rows="auto,auto,auto,auto" columns="auto" class="content">
+<GridLayout rows="auto,auto,auto,auto, auto" columns="auto" class="content">
         <GridLayout class="" marginTop="15" row="0"
             width="100%" columns="auto,*" rows="auto,auto,auto,auto"
             verticalAlignment="center">
@@ -77,9 +77,9 @@
         </FlexboxLayout>
         <GridLayout *ngIf="item" columns="auto,*,auto,auto" rows="auto"
             marginTop="5" width="100%" row="3" class="">
-            <GridLayout col="0" rows="auto" columns="auto,auto" (tap)="toggleLike(item)">
-                <Label col="0" row="0" #like [class]="item.isLike ? 'fa like-icon liked-active' : 'fa like-icon default'"
-                    [text]="item.isLike ? '&#xf164;':'&#xf087;'"></Label>
+            <GridLayout col="0" rows="auto" columns="auto,auto">
+                <Label col="0" row="0"  class="fa like-icon liked-active"
+                    text="&#xf164;"></Label>
                 <Label col="1" row="0" class="layout" [text]="item.likes"></Label>
             </GridLayout>
             <StackLayout col="1" orientation="horizontal" marginLeft="15">
@@ -88,13 +88,22 @@
             </StackLayout>
             <GridLayout col="2" rows="auto" columns="auto,auto" (tap)="toggleHeart(item)"
                 marginRight="15">
-                <Label col="0" row="0" #favorite [class]="item.isFavorite ? 'like-icon fa heart-active' : 'like-icon fa default'"
-                    [text]="item.isFavorite ? '&#xf004;':'&#xf08a;'"></Label>
+                <Label col="0" row="0" class="like-icon fa heart-active"
+                    text="&#xf004;"></Label>
                 <Label col="1" row="0" class="layout" text="Favorite"></Label>
             </GridLayout>
             <StackLayout col="3" orientation="horizontal">
-                <Label ref="" class="like-icon layout fa" text="&#xf045;"></Label>
-                <Label class="layout" text="Share"></Label>
+                <Label ref="" class="like-icon rating-icon fa" text="&#xf005;"></Label>
+                <Label class="layout" text="{{item.rating}}"></Label>
+            </StackLayout>
+        </GridLayout>
+        <GridLayout *ngIf="item" columns="*" rows="auto,*"
+            marginTop="5" width="100%" row="4" class="">
+            <StackLayout row="0" orientation="horizontal">
+                <Label class="layout text-uppercase" text="description"></Label>
+            </StackLayout>
+            <StackLayout row="1" orientation="vertical" class="p-b-10">
+                <Label textWrap="true" [text]="item.description"></Label>
             </StackLayout>
         </GridLayout>
     </GridLayout>

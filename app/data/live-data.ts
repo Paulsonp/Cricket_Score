@@ -7,7 +7,7 @@ export class LiveService {
   getLiveData(): Array<LiveData> {
     return [
       {
-        id: 1,
+        id: 0,
         cricket_logo:'https://pbs.twimg.com/profile_images/1098124377202327552/juwuMrhX_400x400.png',
         team_name: 'INDIA',
         category: '3 T20 INTERNATIONAL SERIES, 2019',
@@ -26,19 +26,13 @@ export class LiveService {
         oppo_team_wic: 10,
         oppo_team_over: 48.5,
         price: '300.00',
-        likes: 987,
-        isLike: false,
-        isFavorite: true,
-        comments: 13,
-        rating: '4.5',
-        description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				\nRatione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				\nNesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi!
-				\nRatione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				\nNesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi!`
+        likes: 250,
+        comments: 80,
+        rating: '5',
+        description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit.Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit.Nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi!`
       },
       {
-        id: 2,
+        id: 1,
         cricket_logo:'https://upload.wikimedia.org/wikipedia/en/thumb/2/26/2011_Cricket_World_Cup_Logo.svg/1200px-2011_Cricket_World_Cup_Logo.svg.png',
         team_name: 'INDIA',
         category: '3 T20 INTERNATIONAL SERIES, 2019',
@@ -51,22 +45,41 @@ export class LiveService {
         team_wic: 6,
         team_over: 50,
         oppo_team_name:'Srilanka',
-        oppo_team: 'nz',
-        oppo_team_flag: 'https://static2.stuff.co.nz/1412653711/351/10589351.jpg',
+        oppo_team: 'sl',
+        oppo_team_flag: 'https://y5buddy.sg/wp-content/uploads/2016/08/Sri-Lanka-flag.jpg',
         oppo_team_run: 190,
         oppo_team_wic: 10,
         oppo_team_over: 48.5,
         price: '300.00',
-        likes: 987,
-        isLike: false,
-        isFavorite: true,
-        comments: 13,
+        likes: 10,
+        comments: 5,
         rating: '4.5',
-        description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				\nRatione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				\nNesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi!
-				\nRatione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				\nNesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi!`
+        description: `ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit.  Nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit.  Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit.  Nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi!`
+      },
+      {
+        id: 2,
+        cricket_logo:'https://upload.wikimedia.org/wikipedia/en/9/99/2020_ICC_Mens_T20_World_Cup_Logo.png',
+        team_name:'india',
+        category: '3 T20 INTERNATIONAL SERIES, 2019',
+        place: 'EDEN PARK, AUCKLAND',
+        time: '2ND T20I - 11:30 IST FRI',
+        categoryTag: '#008394',
+        team: 'ind',
+        team_flag: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/India-flag-a4.jpg',
+        team_run: 210,
+        team_wic: 6,
+        team_over: 50,
+        oppo_team_name:'AUSTRALIA',
+        oppo_team: 'Aus',
+        oppo_team_flag: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Cook_Islands.svg/1200px-Flag_of_the_Cook_Islands.svg.png',
+        oppo_team_run: 190,
+        oppo_team_wic: 10,
+        oppo_team_over: 48.5,
+        price: '300.00',
+        likes: 101,
+        comments: 200,
+        rating: '4.1',
+        description: `veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt sint dolorum sequi dicta omnis dolor blanditiis,  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit.  Nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi!`
       },
       {
         id: 3,
@@ -88,16 +101,60 @@ export class LiveService {
         oppo_team_wic: 10,
         oppo_team_over: 48.5,
         price: '300.00',
-        likes: 987,
-        isLike: false,
-        isFavorite: true,
-        comments: 13,
-        rating: '4.5',
-        description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				\nRatione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				\nNesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi!
-				\nRatione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				\nNesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi!`
+        likes: 300,
+        comments: 130,
+        rating: '5',
+        description: `veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt sint dolorum sequi dicta omnis dolor blanditiis,  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit.  Nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi!`
+      },
+      {
+        id: 4,
+        cricket_logo:'https://upload.wikimedia.org/wikipedia/en/9/99/2020_ICC_Mens_T20_World_Cup_Logo.png',
+        team_name:'india',
+        category: '3 T20 INTERNATIONAL SERIES, 2019',
+        place: 'EDEN PARK, AUCKLAND',
+        time: '2ND T20I - 11:30 IST FRI',
+        categoryTag: '#008394',
+        team: 'ind',
+        team_flag: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/India-flag-a4.jpg',
+        team_run: 210,
+        team_wic: 6,
+        team_over: 50,
+        oppo_team_name:'AUSTRALIA',
+        oppo_team: 'nz',
+        oppo_team_flag: 'https://static2.stuff.co.nz/1412653711/351/10589351.jpg',
+        oppo_team_run: 190,
+        oppo_team_wic: 10,
+        oppo_team_over: 48.5,
+        price: '300.00',
+        likes: 90,
+        comments: 15,
+        rating: '3.5',
+        description: `veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt sint dolorum sequi dicta omnis dolor blanditiis,  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit.  Nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi!`
+      },
+      {
+        id: 5,
+        cricket_logo:'https://upload.wikimedia.org/wikipedia/en/9/99/2020_ICC_Mens_T20_World_Cup_Logo.png',
+        team_name:'india',
+        category: '3 T20 INTERNATIONAL SERIES, 2019',
+        place: 'EDEN PARK, AUCKLAND',
+        time: '2ND T20I - 11:30 IST FRI',
+        categoryTag: '#008394',
+        team: 'ind',
+        team_flag: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/India-flag-a4.jpg',
+        team_run: 210,
+        team_wic: 6,
+        team_over: 50,
+        oppo_team_name:'AUSTRALIA',
+        oppo_team: 'nz',
+        oppo_team_flag: 'https://static2.stuff.co.nz/1412653711/351/10589351.jpg',
+        oppo_team_run: 190,
+        oppo_team_wic: 10,
+        oppo_team_over: 48.5,
+        price: '300.00',
+        likes: 201,
+        comments: 70,
+        rating: '3.5',
+        description: `veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt sint dolorum sequi dicta omnis dolor blanditiis,  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit.  Nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi Ratione maiores, veritatis nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt sint dolorum sequi dicta omnis dolor blanditiis, ipsam officiis commodi temporibus quas non nobis tempore saepe necessitatibus quasi!`
       }
     ];
   }

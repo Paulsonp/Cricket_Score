@@ -24,6 +24,7 @@
         >
         </Label>
         <Label
+        (tap)="openVideoModal()"
           verticalAlignment="bottom"
           fontSize="6"
           text="LIVE"
@@ -39,14 +40,15 @@
       <Label class="p-l-5" color="#fff" [text]="item.tagline"></Label>
     </StackLayout>
     <GridLayout #videoModal row="0" rows="auto" backgroundColor="rgba(0,0,0,0.7)">
-      <VideoPlayer
+      <!-- Here is the code for video just install  tns plugin add nativescript-videoplayer -->
+      <!-- <VideoPlayer
         #vPlayer
         row="0"
         src="https://espnfw-a.akamaihd.net/m/1/87146/65/4474305/Abhay15sec_939483_181.mp4"
         autoplay="true"
         height="190"
       >
-      </VideoPlayer>
+      </VideoPlayer> -->
       <Label
         row="0"
         horizontalAlignment="right"
@@ -54,19 +56,20 @@
         fontSize="25"
         text="&#xf2d3;"
         class="fa p-5"
-        (tap)="closeVideoModal(vPlayer)"
+        (tap)="closeVideoModal()"
       ></Label>
     </GridLayout>
   </GridLayout>
   <ScrollView  orientation="horizontal">
     <StackLayout orientation="horizontal" class="">
-      <GridLayout *ngFor="let imageString of item.images" rows="auto" columns="*">
-        <Image class="card-img-thumb" row="0" col="0" [src]="imageString" stretch="aspectFill"></Image>
+      <GridLayout *ngFor="let imageString of item.images; index as i;" rows="auto" columns="*">
+        <Image class="card-img-thumb" (tap)="onClick(i)" row="0" col="0" [src]="imageString" stretch="aspectFill"></Image>
       </GridLayout>
     </StackLayout>
   </ScrollView>
 
   <ScrollView orientation="vertical">
-    <LiveScore></LiveScore>
+    <LiveScore [selected]="selected"></LiveScore>
   </ScrollView>
+  <ActivityIndicator [busy]="spinner"></ActivityIndicator>
 </StackLayout>

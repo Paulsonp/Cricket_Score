@@ -19,8 +19,6 @@ export interface LiveData {
     oppo_team_over: number,
     price: string;
     likes: number;
-    isLike: boolean;
-    isFavorite: boolean;
     comments: number;
     rating: string;
     description: string;

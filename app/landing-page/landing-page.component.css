@@ -1,0 +1,9 @@
+.bottom-gradient {
+    background: linear-gradient(to bottom, #414345, #232526);
+}
+.text-style {
+    font-size: 20;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+}

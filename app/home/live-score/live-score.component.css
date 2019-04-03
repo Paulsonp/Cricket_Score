@@ -73,7 +73,9 @@
   margin-right: 2;
   padding: 5 5 5 5;
 }
-
+.rating-icon{
+  color: #ffc402;
+}
 .category-icon {
   text-align: center;
   padding-top: 5;
