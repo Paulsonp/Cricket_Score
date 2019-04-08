@@ -15,8 +15,8 @@ export class UpcomingMatchesComponent implements OnInit {
 	constructor(private get_data_services: UpcomingCricketService,private routerExtensions: RouterExtensions ) { }
 	
 	ngOnInit(): void {
-		this.get_data_services.getList().subscribe(res => {
-			this.items = res.data;
+		this.get_data_services.getOldList().subscribe(res => {
+			this.items = res.matches;
 			this.processing = false;
 			console.log('hai now playing', this.items)
 		});

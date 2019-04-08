@@ -1,0 +1,24 @@
+.action-bar{
+	background-color:#00bcd4;
+	color: #fff;
+	text-transform: uppercase;
+}
+.site-template-image {
+    border-radius: 10;
+    border-color: rgb(31, 64, 114);
+    border-width: 1;
+    margin: 8 16;
+    width: 60;
+    height: 60;
+}
+
+.site-template-title {
+    margin: 0 0 6 0;
+    font-size: 18;
+    color: rgb(31, 64, 114);
+}
+
+.site-template-description {
+    font-size: 12;
+    color: rgb(233, 78, 78);
+}

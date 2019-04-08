@@ -1,0 +1,23 @@
+<ActionBar title="CRICKET CALENDER" class="action-bar">
+    <NavigationButton android.systemIcon="ic_menu_back" title="Back" (tap)="goBack()"></NavigationButton>
+    <ActionItem text="Old Matches" ios.position="right" android.position="popup"  [nsRouterLink]="['/upcoming']"
+    pageTransition="slideLeft"></ActionItem>
+</ActionBar>
+
+<StackLayout class="page">
+<ListView class="list-group" [items]="items">
+    <ng-template let-item="item">
+        <GridLayout rows="*, auto" columns="auto, *, auto">
+<Image src="~/assets/images/icons/calender_icon.png" stretch="aspectFit" class="site-template-image"></Image>
+            <StackLayout col="1" verticalAlignment="center">
+              <Label class="site-template-title" textWrap="true" [text]="item ? item.name : 'no data'"></Label>
+              <Label class="site-template-description" [text]="item ? item.date : 'no data'"></Label>
+            </StackLayout>
+            <StackLayout margin="0,16,0,42" row="1" colSpan="2" backgroundColor="lightGray" height="1"></StackLayout>
+          </GridLayout>
+    </ng-template>
+</ListView>
+<ActivityIndicator horizontalAlignment="center" verticalAlignment="center"
+    [busy]="processing" class="activity-indicator">
+</ActivityIndicator>
+</StackLayout>

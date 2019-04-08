@@ -3,3 +3,93 @@
 	color: #fff;
 	text-transform: uppercase;
 }
+
+
+.owe-list {
+    margin: 0 15 15;
+}
+
+.owe-list-item {
+    background-color: #fff;
+}
+
+.owe-main-info {
+    padding: 10 15;
+}
+
+.owe-category-icon {
+    width: 45;
+    height: 45;
+    margin-right: 15;
+}
+
+.owe-info-container {
+    color: #acacac;
+    font-size: 13;
+}
+
+.owe-title {
+    font-weight: 600;
+    margin-bottom: 5;
+    color: #000;
+    font-size: 15;
+}
+
+.debtor-name {
+    font-weight: 600;
+    color: #8f91de;
+}
+
+.owe-ammount {
+    font-weight: 600;
+    color: #f67979;
+}
+
+.owed-ammount {
+    color: #78d49a;
+    font-weight: 600;
+}
+
+.pay-amount {
+    color: #8f91de;
+    font-size: 15;
+}
+
+.owe-secondary-info {
+    padding: 5 15;
+    color: #acacac;
+    font-size: 14;
+    border-top-width: 1;
+    border-top-color: #e9e9e9;
+}
+
+.time-information {
+    margin-top: -2;
+}
+
+.debtor-list {
+    margin-left: 5;
+    margin-right: 10;
+}
+
+.debtor-list-item {
+    margin-right: -10;
+}
+
+.debtor-list-item-image {
+    width: 30;
+    border-radius: 50%;
+    background-color: #fff;
+    border-width: 2;
+    border-color: #fff;
+}
+
+.settle-up-icon {
+    width: 12;
+    margin-left: 2;
+}
+
+.divider {
+    height: 15;
+    background-color: #e8e7e7;
+}

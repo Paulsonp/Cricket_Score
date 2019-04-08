@@ -9,8 +9,7 @@ import { API_URL, API_KEY } from './config';
 @Injectable()
 export class UpcomingCricketService {
     upcomingCricketList = API_URL + '/matchCalendar?apikey=' + API_KEY;
-    oldCricketList = API_URL + '/cricket?apikey=' + API_KEY;
-    // https://cricapi.com/api/matchCalendar?apikey=5VLOXMYkQYcfgmEjHRkft17q6d72
+    oldCricketList = API_URL + '/matches?apikey=' + API_KEY;
 
     constructor(private http: Http) { }
     getList(): Observable<any> {

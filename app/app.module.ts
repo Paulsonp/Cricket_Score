@@ -8,6 +8,7 @@ import { DataService } from "./data/data";
 import { LiveService } from "./data/live-data";
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UpcomingCricketService } from "./data/list-upcoming.services";
+import { CricketChartComponent } from './cricket-chart/cricket-chart.component';
 
 @NgModule({
    bootstrap: [
@@ -25,7 +26,8 @@ import { UpcomingCricketService } from "./data/list-upcoming.services";
    ],
    declarations: [
       AppComponent,
-      LandingPageComponent
+      LandingPageComponent,
+      CricketChartComponent
    ],
    schemas: [
       NO_ERRORS_SCHEMA
