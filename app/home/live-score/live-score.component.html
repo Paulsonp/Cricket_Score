@@ -1,19 +1,17 @@
-<GridLayout rows="auto,auto,auto,auto, auto" columns="auto" class="content">
-        <GridLayout class="" marginTop="15" row="0"
-            width="100%" columns="auto,*" rows="auto,auto,auto,auto"
-            verticalAlignment="center">
-            <StackLayout row="0" col="0" rowSpan="4" class="m-r-10 m-b-5">
-                <Image [src]="item?.cricket_logo" height="70" width="70" stretch="aspectFit"></Image>
+<ScrollView orientation="vertical">
+    <GridLayout rows="auto,auto,auto,auto, auto" columns="auto" class="content">
+        <GridLayout class="" marginTop="10" row="0" width="100%" columns="auto,*"
+            rows="auto,auto,auto,auto" verticalAlignment="center">
+            <StackLayout row="0" col="0" rowSpan="4" class="m-r-10 m-b-5 m-t-5">
+                <Image [src]="item?.cricket_logo" height="70" width="70"
+                    stretch="aspectFit"></Image>
             </StackLayout>
-                
+
             <Label row="0" col="1" class="cr-name text-uppercase" textwrap="true"
-                 text="{{item.team_name}} vs {{item.oppo_team_name}}"></Label>
-            <Label row="1" col="1" class="cr-category" textwrap="true"
-                [text]="item.category"></Label>
-            <Label row="2" col="1" class="cr-place" [text]="item.place"></Label>
-            <StackLayout row="3" col="1" orientation="horizontal">
-                <Label class="cr-time" [text]="item.time"></Label>
-            </StackLayout>
+                text="{{item.team_name}} vs {{item.oppo_team_name}}"></Label>
+            <Label row="1" col="1" class="cr-category" textwrap="true" [text]="item.category"></Label>
+            <Label row="2" col="1" class="cr-place"  [text]="item.place"></Label>
+            <Label row="3" col="1" class="cr-time" [text]="item.time"></Label>
         </GridLayout>
         <FlexboxLayout row="1" class="m-t-10 m-b-10" flexDirection="row"
             justifyContent="space-between" width="100%">
@@ -37,7 +35,7 @@
             <StackLayout class="p-r-5" width="30%">
                 <FlexboxLayout flexDirection="row" justifyContent="space-between"
                     width="100%">
-                    <Image height="20" width="20" stretch="aspectFit" class="anim-icons"
+                    <Image height="20" width="20" stretch="aspectFit" class="animation-icons"
                         src="https://www.theislandwiki.org/images/thumb/8/8d/Cricketicon.png/100px-Cricketicon.png"></Image>
                     <Label class="text-right cr-score-text" fontSize="14"
                         text="{{item.oppo_team_run}}/{{item.oppo_team_wic}}"></Label>
@@ -60,7 +58,7 @@
         </FlexboxLayout>
         <FlexboxLayout row="2" class="m-t-10 m-b-10 " flexDirection="row"
             justifyContent="space-between" width="100%">
-            <Image height="20" width="20" stretch="aspectFit" class="anim-icons"
+            <Image height="20" width="20" stretch="aspectFit" class="animation-icons"
                 src="https://www.freeiconspng.com/minicovers/cricket-ball-png-9.png"></Image>
             <StackLayout class="p-r-5" width="50%">
                 <Label class="text-center text-uppercase cr-score-text"
@@ -78,8 +76,7 @@
         <GridLayout *ngIf="item" columns="auto,*,auto,auto" rows="auto"
             marginTop="5" width="100%" row="3" class="">
             <GridLayout col="0" rows="auto" columns="auto,auto">
-                <Label col="0" row="0"  class="fa like-icon liked-active"
-                    text="&#xf164;"></Label>
+                <Label col="0" row="0" class="fa like-icon liked-active" text="&#xf164;"></Label>
                 <Label col="1" row="0" class="layout" [text]="item.likes"></Label>
             </GridLayout>
             <StackLayout col="1" orientation="horizontal" marginLeft="15">
@@ -88,17 +85,16 @@
             </StackLayout>
             <GridLayout col="2" rows="auto" columns="auto,auto" (tap)="toggleHeart(item)"
                 marginRight="15">
-                <Label col="0" row="0" class="like-icon fa heart-active"
-                    text="&#xf004;"></Label>
+                <Label col="0" row="0" class="like-icon fa heart-active" text="&#xf004;"></Label>
                 <Label col="1" row="0" class="layout" text="Favorite"></Label>
             </GridLayout>
             <StackLayout col="3" orientation="horizontal">
-                <Label ref="" class="like-icon rating-icon fa" text="&#xf005;"></Label>
+                ß <Label ref="" class="like-icon rating-icon fa" text="&#xf005;"></Label>
                 <Label class="layout" text="{{item.rating}}"></Label>
             </StackLayout>
         </GridLayout>
-        <GridLayout *ngIf="item" columns="*" rows="auto,*"
-            marginTop="5" width="100%" row="4" class="">
+        <GridLayout *ngIf="item" columns="*" rows="auto,*" marginTop="5"
+            width="100%" row="4" class="">
             <StackLayout row="0" orientation="horizontal">
                 <Label class="layout text-uppercase" text="description"></Label>
             </StackLayout>
@@ -107,3 +103,4 @@
             </StackLayout>
         </GridLayout>
     </GridLayout>
+</ScrollView>

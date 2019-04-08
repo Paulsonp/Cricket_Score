@@ -6,6 +6,7 @@ import { LandingPageComponent } from "./landing-page/landing-page.component";
 const routes: Routes = [
     { path: "", redirectTo: "/landing", pathMatch: "full" },
     { path: "home", loadChildren: "./home/home.module#HomeModule" },
+    { path: "upcoming", loadChildren: "./upcoming-matches/upcoming-matches.module#UpcomingMatchesModule" },
     { path: "landing", component: LandingPageComponent}
 ];
 

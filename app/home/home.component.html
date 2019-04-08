@@ -62,6 +62,9 @@
   </GridLayout>
   <ScrollView  orientation="horizontal">
     <StackLayout orientation="horizontal" class="">
+        <Image class="card-img-thumb" [nsRouterLink]="['/upcoming']"
+        pageTransition="slideLeft" src="https://ezsports.tv/wp-content/uploads/2019/01/next-1-800x445.jpg"
+        stretch="aspectFill"></Image>
       <GridLayout *ngFor="let imageString of item.images; index as i;" rows="auto" columns="*">
         <Image class="card-img-thumb" (tap)="onClick(i)" row="0" col="0" [src]="imageString" stretch="aspectFill"></Image>
       </GridLayout>

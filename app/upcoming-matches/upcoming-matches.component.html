@@ -1,0 +1,21 @@
+<!-- <ActionBar title="UP COMING MATCHES" class="action-bar">
+    <NavigationButton android.systemIcon="ic_menu_back" text="Back" (tap)="goBack()"></NavigationButton>
+</ActionBar> -->
+<ActionBar title="UP COMING MATCHES" class="action-bar">
+    <NavigationButton android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
+</ActionBar>
+
+<StackLayout class="page">
+<ListView class="list-group" [items]="items">
+    <ng-template let-item="item">
+        <GridLayout class="list-group-item" rows="*,auto" columns="*">
+            <Label row="0" col="0" textWrap="true" [text]="item.name"
+                color="orange"></Label>
+            <Label row="1" col="0" [text]="item.date" color="red"></Label>
+        </GridLayout>
+    </ng-template>
+</ListView>
+<ActivityIndicator horizontalAlignment="center" verticalAlignment="center"
+    [busy]="processing" class="activity-indicator">
+</ActivityIndicator>
+</StackLayout>

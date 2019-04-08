@@ -1,4 +1,5 @@
 import { NgModule, NgModuleFactoryLoader, NO_ERRORS_SCHEMA } from "@angular/core";
+import { NativeScriptHttpModule } from "nativescript-angular/http";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 import { AppRoutingModule } from "./app-routing.module";
@@ -6,6 +7,7 @@ import { AppComponent } from "./app.component";
 import { DataService } from "./data/data";
 import { LiveService } from "./data/live-data";
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { UpcomingCricketService } from "./data/list-upcoming.services";
 
 @NgModule({
    bootstrap: [
@@ -13,11 +15,13 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
    ],
    imports: [
       NativeScriptModule,
-      AppRoutingModule
+      AppRoutingModule,
+      NativeScriptHttpModule
    ],
    providers: [
       DataService,
-      LiveService
+      LiveService,
+      UpcomingCricketService
    ],
    declarations: [
       AppComponent,
