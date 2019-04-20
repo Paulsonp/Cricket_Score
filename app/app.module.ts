@@ -9,6 +9,10 @@ import { LiveService } from "./data/live-data";
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UpcomingCricketService } from "./data/list-upcoming.services";
 import { CricketChartComponent } from './cricket-chart/cricket-chart.component';
+import { MatchesDetailsComponent } from "./upcoming-matches/matches-details/matches-details.component";
+import { DashboardComponent } from "./dashboard/dashboard.component";
+import { OldMatchesComponent } from "./old-matches/old-matches.component";
+import { PlayerDetailsComponent } from "./upcoming-matches/player-details/player-details.component";
 
 @NgModule({
    bootstrap: [
@@ -27,7 +31,11 @@ import { CricketChartComponent } from './cricket-chart/cricket-chart.component';
    declarations: [
       AppComponent,
       LandingPageComponent,
-      CricketChartComponent
+      CricketChartComponent,
+      MatchesDetailsComponent,
+      DashboardComponent,
+      OldMatchesComponent,
+      PlayerDetailsComponent
    ],
    schemas: [
       NO_ERRORS_SCHEMA

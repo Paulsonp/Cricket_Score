@@ -1,0 +1,27 @@
+.color-green{
+    color: green;
+}
+.color-blue{
+    color: #00bcd4;
+}
+.color-wick{
+    color: red;
+}
+.match-section{
+   
+}
+ActionBar{
+    background: #00bcd4;
+    color: #fff;
+}
+.tag-box{
+    background: #00bcd4;
+}
+.tag-box label{
+    color: #fff;
+}
+.thumb{
+    width: 60;
+    height: 60;
+    border-radius: 50;
+}

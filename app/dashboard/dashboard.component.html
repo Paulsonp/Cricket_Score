@@ -1,0 +1,39 @@
+<GridLayout class="dashboad-bg" columns="*, *" rows="*, *, *,100">
+    <StackLayout  horizontalAlignment="center" verticalAlignment="center" row="0" colSpan="3">
+            <StackLayout class="menu-item icon-img"> </StackLayout>
+            <label class="menu-item-text" text="Live Score"></label>
+    </StackLayout>
+    <StackLayout row="1" colSpan="3">
+        <GridLayout columns="*,*" rows="*">
+            <StackLayout  horizontalAlignment="center" verticalAlignment="center" row="0" col="0">
+                    <StackLayout class="menu-item icon-img-1" (tap)="goNewMatchList()"> </StackLayout>
+            <label class="menu-item-text" text="New Matches" (tap)="goNewMatchList()"></label>
+                </StackLayout>
+                <StackLayout horizontalAlignment="center" verticalAlignment="center" row="0" col="1">
+                        <StackLayout class="menu-item icon-img-2" [nsRouterLink]="['/oldMatches']"
+                        pageTransition="slideLeft"> </StackLayout>
+            <label class="menu-item-text" text="Old Matches" [nsRouterLink]="['/oldMatches']"
+            pageTransition="slideLeft"></label>
+                    </StackLayout>
+        </GridLayout>
+    </StackLayout>
+    <StackLayout horizontalAlignment="center" verticalAlignment="center" row="2" col="0" >
+                    <StackLayout class="menu-item icon-img-3" (tap)="goMatchList()"> </StackLayout>
+        <label class="menu-item-text" text="Match Calendar" (tap)="goMatchList()"></label>
+        </StackLayout>
+        <StackLayout horizontalAlignment="center" verticalAlignment="center" row="2" col="1">
+                <StackLayout class="menu-item icon-img-4"  [nsRouterLink]="['/home']"
+                pageTransition="slideLeft"> </StackLayout>
+    <label class="menu-item-text" text="Demo Page"  [nsRouterLink]="['/home']"
+    pageTransition="slideLeft"></label>
+            </StackLayout>
+    <StackLayout row="3" colSpan="3">
+            <!-- <GridLayout columns="*,*,*,*" rows="*">
+                    <Label text="Label 7" row="0" col="0" ></Label>
+                    <Label text="Label 8" row="0" col="1"></Label>
+                    <Label text="Label 9" row="0" col="2"></Label>
+                    <Label text="Label 10" row="0" col="3"></Label>
+            </GridLayout> -->
+        </StackLayout>
+   
+</GridLayout>

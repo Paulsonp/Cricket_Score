@@ -18,8 +18,10 @@ export class CricketChartComponent implements OnInit {
 			this.items = res.data;
 			this.processing = false;
 			console.log('hai now playing', this.items)
-		});
+    });
+    
   }
+
   goBack(): void {
     this.routerExtensions.back();
 }

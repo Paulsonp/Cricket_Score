@@ -1,0 +1,36 @@
+.dashboad-bg{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+background-image: url("~/assets/images/dashboard-bg.jpg");
+}
+.menu-item{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50;
+    width: 100;
+    height: 100;
+}
+.menu-item-text{
+    text-align:center;
+    color: #fff;
+    font-size: 20;
+    font-weight: 600;
+}
+.icon-img{
+    margin-top: 10;
+    background-image: url("~/assets/images/live-icon.png");
+}
+.icon-img-1{
+    background-image: url("~/assets/images/recent-matches.png");
+}
+.icon-img-2{
+    background-image: url("~/assets/images/upcoming-matches.jpg");
+}
+.icon-img-3{
+    background-image: url("~/assets/images/match-calendar.png");
+}
+.icon-img-4{
+    background-image: url("~/assets/images/demo-page.png");
+}

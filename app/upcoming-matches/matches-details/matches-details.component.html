@@ -1,2 +1,131 @@
-<ActionBar title="MATCH DETAILS" class="action-bar">
-  </ActionBar>
+<ActionBar title="MATCH DETAILS">
+    <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
+</ActionBar>
+  <TabView androidTabsPosition="bottom"  >
+      <StackLayout *tabItem="{title: 'Batting'}">
+        <ScrollView>
+        <StackLayout orientation="vertical">
+          <GridLayout class="match-section m-10" columns="auto, *" rows="*"  *ngIf="man_of_the_match">
+            <StackLayout row="0" col="0" width="20%" class="m-r-5">
+              <img src="~/assets/images/man_of_the_match.png" width="80" height="80" alt="" borderRadius="5">
+            </StackLayout>
+            <StackLayout row="0" col="1" width="80%">
+                <label  class="p-l-5 " text="Winner Team"></label>
+                <label  class="p-l-5 color-green h3 font-weight-bold" [text]="all_data.winner_team"></label>
+                <label  class="p-l-5 " text="Man Of The Match"></label>
+                <label class="p-l-5 color-green h3 font-weight-bold" [text]="man_of_the_match.name"></label>        
+            </StackLayout>
+          </GridLayout>
+<StackLayout class="p-5 tag-box">
+    <label text="SCORE CARD" class="text-center font-weight-bold h3"></label>
+</StackLayout>
+<Label *ngIf="!batting_data.title"class="p-5 text-center" textWrap="true" text="Data Not Available Now"></Label>
+            <StackLayout *ngFor="let bat_data of batting_data" >
+                <Label *ngIf="bat_data.title" class="h3 text-uppercase text-left p-l-5 p-t-20 p-b-15 font-weight-bold" textWrap="true" [text]="bat_data ? bat_data.title : 'no data'"></Label>
+                <StackLayout orientation="vertical" *ngIf="bat_data.title">
+                    <FlexboxLayout class="m-5" flexWrap="wrap" justifyContent="space-between">
+                        <Label width="25%" class="p-5 font-weight-bold" textWrap="true" text="BatsMan"></Label>
+                        <Label class="list-view p-5 font-weight-bold text-center" text="B"></Label>
+                        <Label class="list-view p-5 font-weight-bold text-center" text="R"></Label>
+                        <Label class="list-view p-5 font-weight-bold text-center" text="SR"></Label>
+                        <Label class="list-view p-5 font-weight-bold text-center" text="4s"></Label>
+                        <Label class="list-view p-5 font-weight-bold text-center" text="6s"></Label>
+                        <Label width="15%" class="list-view p-5 font-weight-bold text-center" text="Out"></Label>
+                    </FlexboxLayout>
+                <FlexboxLayout class="m-5" flexWrap="wrap" justifyContent="space-between" *ngFor="let data of bat_data.scores">
+                    <Label width="25%" class="p-5" textWrap="true" [text]="data ? data.batsman : 'no data'"></Label>
+                    <Label class="list-view p-5 text-center" [text]="data ? data.B : '0'"></Label>
+                    <Label class="list-view p-5 text-center" [text]="data ? data.R : '0'"></Label>
+                    <Label class="list-view p-5 text-center" [text]="data ? data.SR : '0'"></Label>
+                    <Label class="list-view p-5 text-center color-green font-weight-bold" [text]="data['4s']"></Label>
+                    <Label class="list-view p-5 text-center color-blue font-weight-bold" [text]="data['6s']"></Label>
+                    <Label width="15%" class="list-view p-5 text-center " [text]="data ? data.dismissal : '0'"></Label>
+                    <Label *ngIf="data.detail" class="list-view p-5 text-center color-wick" [text]="data ? data.detail : 'no data'"></Label>
+                    <Label  width="100%" class="list-view p-5 text-center color-wick" [text]="data ? data['dismissal-info'] : 'no data'"></Label>
+                 </FlexboxLayout>
+                </StackLayout>
+              </StackLayout>
+            </StackLayout>
+          </ScrollView>
+      </StackLayout>
+      <StackLayout *tabItem="{title: 'Bowling'}">
+        <ScrollView>
+            <StackLayout orientation="vertical">
+                <Label *ngIf="!bowling_data.title"class="p-5 text-center" textWrap="true" text="Data Not Available Now"></Label>
+        <StackLayout *ngFor="let bowl_data of bowling_data">
+            <Label *ngIf="bowl_data.title" class="h3 text-uppercase text-center p-t-20 p-b-15 font-weight-bold" textWrap="true" [text]="bowl_data ? bowl_data.title : 'no data'"></Label>
+            <StackLayout orientation="vertical">
+                <FlexboxLayout class="m-5" flexWrap="wrap" justifyContent="space-between" >
+                    <Label width="25%" class="p-5 font-weight-bold" textWrap="true" text="Name"></Label>
+                    <Label class="list-view p-5 font-weight-bold" text="Over"></Label>
+                    <Label class="list-view p-5 font-weight-bold" text="M"></Label>
+                    <Label class="list-view p-5 font-weight-bold" text="Runs"></Label>
+                    <Label class="list-view p-5 font-weight-bold" text="Wick"></Label>
+                    <Label class="list-view p-5 font-weight-bold" text="Econo"></Label>
+                    <Label class="list-view p-5 font-weight-bold" text="0s"></Label>
+                    <Label class="list-view p-5 font-weight-bold" text="4s"></Label>
+                    <Label class="list-view p-5 font-weight-bold" text="6s"></Label>
+                </FlexboxLayout>
+            <FlexboxLayout class="m-5" flexWrap="wrap" justifyContent="space-between" *ngFor="let data of bowl_data.scores">
+                <Label width="25%" class="p-5" textWrap="true" [text]="data ? data.bowler : 'no data'"></Label>
+                <Label class="list-view p-5 text-center" [text]="data ? data.O : '0'"></Label>
+                <Label class="list-view p-5 text-center" [text]="data ? data.M : '0'"></Label>
+                <Label class="list-view p-5 text-center" [text]="data ? data.R : '0'"></Label>
+                <Label class="list-view p-5 text-center" [text]="data ? data.W : '0'"></Label>
+                <Label class="list-view p-5 text-center" [text]="data ? data.Econ : '0'"></Label>
+                <Label class="list-view p-5 text-center" [text]="data['0s']"></Label>
+                <Label class="list-view p-5 text-center" [text]="data['4s']"></Label>
+                <Label class="list-view p-5 text-center" [text]="data['6s']"></Label>
+             </FlexboxLayout>
+            </StackLayout>
+          </StackLayout>
+        </StackLayout>
+        </ScrollView>
+      </StackLayout>
+      <StackLayout *tabItem="{title: 'Fielding'}">
+      <ScrollView>
+          <StackLayout orientation="vertical">
+        <StackLayout *ngFor="let data of fielding_data">
+            <Label class="h3 text-uppercase text-center p-t-20 p-b-15 font-weight-bold" textWrap="true" [text]="data ? data.title : 'no data'"></Label>
+            <StackLayout orientation="vertical">
+                <FlexboxLayout class="m-5" flexWrap="wrap" justifyContent="space-between">
+                    <Label width="25%" class="p-5 font-weight-bold" textWrap="true" text="Name"></Label>
+                    <Label class="list-view p-5 font-weight-bold" text="Runout"></Label>
+                    <Label class="list-view p-5 font-weight-bold" text="Stumped"></Label>
+                    <Label class="list-view p-5 font-weight-bold" text="Bowled"></Label>
+                    <Label class="list-view p-5 font-weight-bold" text="Lbw"></Label>
+                    <Label class="list-view p-5 font-weight-bold" text="Catch"></Label>
+                </FlexboxLayout>
+            <FlexboxLayout class="m-5" flexWrap="wrap" justifyContent="space-between" *ngFor="let item of data.scores">
+                <Label width="100%" *ngIf="!item.name" class="p-5 text-center" textWrap="true" text="Data Not Available Now"></Label>
+                <Label width="25%" class="p-5" textWrap="true" [text]="item ? item.name : 'no data'"></Label>
+                <Label class="list-view p-5 text-center" [text]="item ? item.runout : 'no data'"></Label>
+                <Label class="list-view p-5 text-center" [text]="item ? item.stumped : 'no data'"></Label>
+                <Label class="list-view p-5 text-center" [text]="item ? item.bowled : 'no data'"></Label>
+                <Label class="list-view p-5 text-center" [text]="item ? item.lbw : 'no data'"></Label>
+                <Label class="list-view p-5 text-center" [text]="item ? item.catch : 'no data'"></Label>
+             </FlexboxLayout>
+            </StackLayout>
+          </StackLayout> 
+        </StackLayout>
+        </ScrollView>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Team'}">
+        <ScrollView>
+            <StackLayout orientation="vertical">
+          <StackLayout *ngFor="let data of team_data" >
+              <Label class="h3 text-uppercase color-blue text-center p-t-20 p-b-15 font-weight-bold" textWrap="true" [text]="data ? data.name : 'no data'"></Label>
+               <GridLayout class="list-group-item m-5" rows="*" columns="auto, *" *ngFor="let item of data.players" (tap)="showItem(item.pid)">
+                  <Image row="0" col="0" src="~/assets/images/plyer_icon.png" class="thumb img-circle m-l-5"></Image>
+                  <Label row="0" col="1" class="h3 m-t-10"  [text]="item.name"></Label>
+              </GridLayout>
+            </StackLayout> 
+          </StackLayout>
+          </ScrollView>
+    </StackLayout>
+    <ActivityIndicator horizontalAlignment="center" verticalAlignment="center"
+[busy]="processing" class="activity-indicator">
+</ActivityIndicator>
+  </TabView>
+
+

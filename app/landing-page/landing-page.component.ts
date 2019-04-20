@@ -20,7 +20,7 @@ export class LandingPageComponent implements OnInit {
   }
   goPage(): void {
     this.spinner= true;
-    this._router.navigate(['/home'], {
+    this._router.navigate(['/dashboard'], {
       transition: { name: 'slideLeft' }
   });
   this.spinner= false;
