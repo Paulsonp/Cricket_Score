@@ -5,21 +5,21 @@
       <StackLayout *tabItem="{title: 'Batting'}">
         <ScrollView>
         <StackLayout orientation="vertical">
-          <GridLayout class="match-section m-10" columns="auto, *" rows="*"  *ngIf="man_of_the_match">
+          <GridLayout class="match-section m-10" columns="auto, *" rows="*"  *ngIf="!matchStarted">
             <StackLayout row="0" col="0" width="20%" class="m-r-5">
               <img src="~/assets/images/man_of_the_match.png" width="80" height="80" alt="" borderRadius="5">
             </StackLayout>
             <StackLayout row="0" col="1" width="80%">
                 <label  class="p-l-5 " text="Winner Team"></label>
-                <label  class="p-l-5 color-green h3 font-weight-bold" [text]="all_data.winner_team"></label>
+                <label  class="p-l-5 color-green h3 font-weight-bold" [text]="all_data?.winner_team"></label>
                 <label  class="p-l-5 " text="Man Of The Match"></label>
-                <label class="p-l-5 color-green h3 font-weight-bold" [text]="man_of_the_match.name"></label>        
+                <label class="p-l-5 color-green h3 font-weight-bold" [text]="man_of_the_match?.name"></label>        
             </StackLayout>
           </GridLayout>
 <StackLayout class="p-5 tag-box">
     <label text="SCORE CARD" class="text-center font-weight-bold h3"></label>
 </StackLayout>
-<Label *ngIf="!batting_data.title"class="p-5 text-center" textWrap="true" text="Data Not Available Now"></Label>
+<!-- <Label *ngIf="!batting_data.title"class="p-5 text-center" textWrap="true" text="Data Not Available Now"></Label> -->
             <StackLayout *ngFor="let bat_data of batting_data" >
                 <Label *ngIf="bat_data.title" class="h3 text-uppercase text-left p-l-5 p-t-20 p-b-15 font-weight-bold" textWrap="true" [text]="bat_data ? bat_data.title : 'no data'"></Label>
                 <StackLayout orientation="vertical" *ngIf="bat_data.title">
@@ -30,7 +30,7 @@
                         <Label class="list-view p-5 font-weight-bold text-center" text="SR"></Label>
                         <Label class="list-view p-5 font-weight-bold text-center" text="4s"></Label>
                         <Label class="list-view p-5 font-weight-bold text-center" text="6s"></Label>
-                        <Label width="15%" class="list-view p-5 font-weight-bold text-center" text="Out"></Label>
+                        <Label width="30%" class="list-view p-5 font-weight-bold text-center" text="Out"></Label>
                     </FlexboxLayout>
                 <FlexboxLayout class="m-5" flexWrap="wrap" justifyContent="space-between" *ngFor="let data of bat_data.scores">
                     <Label width="25%" class="p-5" textWrap="true" [text]="data ? data.batsman : 'no data'"></Label>
@@ -40,8 +40,8 @@
                     <Label class="list-view p-5 text-center color-green font-weight-bold" [text]="data['4s']"></Label>
                     <Label class="list-view p-5 text-center color-blue font-weight-bold" [text]="data['6s']"></Label>
                     <Label width="15%" class="list-view p-5 text-center " [text]="data ? data.dismissal : '0'"></Label>
-                    <Label *ngIf="data.detail" class="list-view p-5 text-center color-wick" [text]="data ? data.detail : 'no data'"></Label>
-                    <Label  width="100%" class="list-view p-5 text-center color-wick" [text]="data ? data['dismissal-info'] : 'no data'"></Label>
+                    <Label *ngIf="data.detail" class="list-view p-5 text-center color-wick" textWrap="true" [text]="data ? data.detail : 'no data'"></Label>
+                    <Label  width="100%" class="list-view p-5 text-center color-wick" textWrap="true" [text]="data ? data['dismissal-info'] : 'no data'"></Label>
                  </FlexboxLayout>
                 </StackLayout>
               </StackLayout>
@@ -51,7 +51,7 @@
       <StackLayout *tabItem="{title: 'Bowling'}">
         <ScrollView>
             <StackLayout orientation="vertical">
-                <Label *ngIf="!bowling_data.title"class="p-5 text-center" textWrap="true" text="Data Not Available Now"></Label>
+                <!-- <Label *ngIf="!bowling_data.title"class="p-5 text-center" textWrap="true" text="Data Not Available Now"></Label> -->
         <StackLayout *ngFor="let bowl_data of bowling_data">
             <Label *ngIf="bowl_data.title" class="h3 text-uppercase text-center p-t-20 p-b-15 font-weight-bold" textWrap="true" [text]="bowl_data ? bowl_data.title : 'no data'"></Label>
             <StackLayout orientation="vertical">

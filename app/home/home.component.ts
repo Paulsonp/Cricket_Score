@@ -62,4 +62,7 @@ export class HomeComponent implements OnInit {
         this.selected = i;
         console.log('image click', i)
     }
+    goBack(): void {
+        this.routerExtensions.back();
+    }
 }

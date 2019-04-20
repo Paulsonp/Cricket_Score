@@ -1,7 +1,9 @@
 <GridLayout class="dashboad-bg" columns="*, *" rows="*, *, *,100">
     <StackLayout  horizontalAlignment="center" verticalAlignment="center" row="0" colSpan="3">
-            <StackLayout class="menu-item icon-img"> </StackLayout>
-            <label class="menu-item-text" text="Live Score"></label>
+            <StackLayout class="menu-item icon-img" [nsRouterLink]="['/liveScorePage']"
+            pageTransition="slideLeft"> </StackLayout>
+            <label class="menu-item-text" text="Live Score" [nsRouterLink]="['/liveScorePage']"
+            pageTransition="slideLeft"></label>
     </StackLayout>
     <StackLayout row="1" colSpan="3">
         <GridLayout columns="*,*" rows="*">

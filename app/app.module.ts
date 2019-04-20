@@ -13,6 +13,7 @@ import { MatchesDetailsComponent } from "./upcoming-matches/matches-details/matc
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { OldMatchesComponent } from "./old-matches/old-matches.component";
 import { PlayerDetailsComponent } from "./upcoming-matches/player-details/player-details.component";
+import { LiveScorePageComponent } from "./live-score/live-score.component";
 
 @NgModule({
    bootstrap: [
@@ -35,7 +36,8 @@ import { PlayerDetailsComponent } from "./upcoming-matches/player-details/player
       MatchesDetailsComponent,
       DashboardComponent,
       OldMatchesComponent,
-      PlayerDetailsComponent
+      PlayerDetailsComponent,
+      LiveScorePageComponent
    ],
    schemas: [
       NO_ERRORS_SCHEMA

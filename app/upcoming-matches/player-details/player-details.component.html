@@ -11,7 +11,7 @@
                 <Label row="2" col="0" [text]="player_data.country" class="title-nation"
                 textAlignment="center"></Label>
 
-            <GridLayout row="3" col="0" rows="auto, auto, auto, auto, auto,auto" columns="auto, auto, auto, auto,auto, auto"
+            <GridLayout row="3" col="0" rows="*, *, *, *, *,*" columns="auto, *"
                 class="additional-info">
                 <Label *ngIf="player_data?.battingStyle" row="0" col="0" text="&#xf0c1;" class="fa icon-aditional-info"></Label>
                 <Label *ngIf="player_data?.battingStyle" row="0" col="1" [text]="player_data?.battingStyle" class="fa description-aditional-info"></Label>
@@ -19,16 +19,16 @@
                 <Label *ngIf="player_data?.playingRole" row="1" col="0" text="&#xf0c1;" class="fa icon-aditional-info"></Label>
                 <Label *ngIf="player_data?.playingRole" row="1" col="1" [text]="player_data?.playingRole" 
                     class="fa description-aditional-info"></Label>
-                    <Label *ngIf="player_data?.majorTeams" row="2" col="0" text="&#xf041;" class="fa icon-aditional-info"></Label>
+                    <Label *ngIf="player_data?.majorTeams" row="2" col="0" text="&#xf0c0;" class="fa icon-aditional-info"></Label>
                 <Label *ngIf="player_data?.majorTeams" row="2" col="1" [text]="player_data?.majorTeams"  textWrap="true"
                     class="fa description-aditional-info"></Label>
-                    <Label *ngIf="player_data?.currentAge" row="3" col="0" text="&#xf041;" class="fa icon-aditional-info"></Label>
+                    <Label *ngIf="player_data?.currentAge" row="3" col="0" text="&#xf073;" class="fa icon-aditional-info"></Label>
                     <Label *ngIf="player_data?.currentAge" row="3" col="1" [text]="player_data?.currentAge"  textWrap="true"
                         class="fa description-aditional-info"></Label>
-                        <Label *ngIf="player_data?.born" row="4" col="0" text="&#xf041;" class="fa icon-aditional-info"></Label>
+                        <Label *ngIf="player_data?.born" row="4" col="0" text="&#xf06b;" class="fa icon-aditional-info"></Label>
                     <Label *ngIf="player_data?.born" row="4" col="1" [text]="player_data?.born"  textWrap="true"
                         class="fa description-aditional-info"></Label>
-                        <Label *ngIf="player_data?.bowlingStyle" row="5" col="0" text="&#xf041;" class="fa icon-aditional-info"></Label>
+                        <Label *ngIf="player_data?.bowlingStyle" row="5" col="0" text="&#xf1db;" class="fa icon-aditional-info"></Label>
                     <Label *ngIf="player_data?.bowlingStyle" row="5" col="1" [text]="player_data?.bowlingStyle"  textWrap="true"
                         class="fa description-aditional-info"></Label>
             </GridLayout>

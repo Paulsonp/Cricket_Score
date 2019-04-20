@@ -1,0 +1,23 @@
+<ActionBar title="LIVE SCORE" class="action-bar">
+    <NavigationButton android.systemIcon="ic_menu_back" title="Back" (tap)="goBack()"></NavigationButton>
+</ActionBar>
+
+<StackLayout class="page" horizontalAlignment="center" verticalAlignment="center">
+<!-- <ListView class="list-group" [items]="items">
+    <ng-template let-item="item"> -->
+           
+        <!-- <GridLayout horizontalAlignment="center" verticalAlignment="center"> -->
+                <Label class="site-template-description text-center h2" text="Coming Soon"></Label>
+<Image src="~/assets/images/live_icon_page.png" stretch="aspectFit" class="site-template-image"></Image>
+            <!-- <StackLayout col="1" verticalAlignment="center">
+              <Label class="site-template-title" textWrap="true" [text]="item ? item.name : 'no data'"></Label>
+              <Label class="site-template-description" [text]="item ? item.date : 'no data'"></Label>
+            </StackLayout> -->
+            <!-- <StackLayout margin="0,16,0,42" row="1" colSpan="2" backgroundColor="lightGray" height="1"></StackLayout> -->
+          <!-- </GridLayout> -->
+    <!-- </ng-template>
+</ListView> -->
+<ActivityIndicator horizontalAlignment="center" verticalAlignment="center"
+    [busy]="processing" class="activity-indicator">
+</ActivityIndicator>
+</StackLayout>

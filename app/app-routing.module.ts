@@ -7,6 +7,8 @@ import { MatchesDetailsComponent } from "./upcoming-matches/matches-details/matc
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { OldMatchesComponent } from "./old-matches/old-matches.component";
 import { PlayerDetailsComponent } from "./upcoming-matches/player-details/player-details.component";
+import { LiveScorePageComponent } from "./live-score/live-score.component";
+
 
 const routes: Routes = [
     { path: "", redirectTo: "landing", pathMatch: "full" },
@@ -16,6 +18,7 @@ const routes: Routes = [
     { path: "landing", component: LandingPageComponent},
     { path: "dashboard", component: DashboardComponent},
     { path: "oldMatches", component: OldMatchesComponent},
+    { path: "liveScorePage", component: LiveScorePageComponent},
     {
         path: "matchDetails/:id", component: MatchesDetailsComponent
     },

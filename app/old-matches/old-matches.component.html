@@ -2,16 +2,17 @@
 <ActionBar title="OLD MATCHES">
     <NavigationButton android.systemIcon="ic_menu_back" title="Back" (tap)="goBack()"></NavigationButton>
 </ActionBar> 
-<ActivityIndicator horizontalAlignment="center" verticalAlignment="center"
-[busy]="processing" class="activity-indicator">
-</ActivityIndicator>
+
 <StackLayout sdkExampleTitle sdkToggleNavButton>
+        <ActivityIndicator horizontalAlignment="center" verticalAlignment="center"
+        [busy]="processing" class="activity-indicator">
+        </ActivityIndicator>
     <GridLayout>
-        <ListView [items]="items" (itemTap)="onItemTap(unique_id)" class="list-group">
+        <ListView [items]="items" class="list-group">
             <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
-                <GridLayout class="list-group-item" rows="*" columns="auto, *">
+                <GridLayout class="list-group-item" rows="*" columns="auto, *" (tap)="onItemTap(item.unique_id)">
                     <Image row="0" col="0" src="~/assets/images/plyer_icon.png" class="thumb img-circle"></Image>
-                    <Label row="0" col="1" [text]="item.title"></Label>
+                    <Label row="0" col="1" [text]="item.title" textWrap="true"></Label>
                 </GridLayout>
             </ng-template>
         </ListView>

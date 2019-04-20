@@ -23,20 +23,20 @@ export class OldMatchesComponent implements OnInit {
 			console.log('hai now playing',this.items)
 		});
   }
-//   public onItemTap(itemId) {
-//     console.log(`Tapped on ${itemId}`);
-//     this._router.navigate([
-//       'matchDetails/' + itemId,
-//       {
-//         animated: true,
-//         transition: {
-//           name: 'slideTop',
-//           duration: 380,
-//           curve: 'easeIn'
-//         }
-//       }
-// 		]);
-// }
+  public onItemTap(itemId) {
+    console.log(`Tapped on ${itemId}`);
+    this._router.navigate([
+      'matchDetails/' + itemId,
+      {
+        animated: true,
+        transition: {
+          name: 'slideTop',
+          duration: 380,
+          curve: 'easeIn'
+        }
+      }
+		]);
+}
   goBack(): void {
     this._router.back();
 }
