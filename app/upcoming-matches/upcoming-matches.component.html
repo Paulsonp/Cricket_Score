@@ -5,38 +5,28 @@
     <NavigationButton android.systemIcon="ic_menu_back" title="Back" (tap)="goBack()"></NavigationButton>
 </ActionBar>
 <StackLayout class="p-t-5">
-        
-    <ListView class="list-group" [items]="items"  style="height:100%">
+         <ActivityIndicator *ngIf="processing" horizontalAlignment="center" verticalAlignment="center"
+    [busy]="processing" class="activity-indicator">
+</ActivityIndicator>
+    <ListView class="list-group"  [items]="items"  style="height:100%" marginLeft="10" marginRight="10">
       <ng-template let-item="item">
-          <GridLayout rows="*, *, 2*,*" columns="100, *, 10" height="100" margin="2.5 15" padding="10 0" borderRadius="10" (tap)="showItem(item.unique_id)">
-            <StackLayout row="0" rowSpan="3" col="0" class="dummy-img" height="80" width="80" verticalAlignment="center" horizontalAlignment="center" borderRadius="5"></StackLayout>
-            <StackLayout padding="5" orientation="horizontal" row="0" col="1" backgroundColor="rgba(0,0,0,0.5)" width="100%" verticalAlignment="center" horizontalAlignment="left" borderRadius="5">
-                <Label   textWrap="true" [text]="item['team-1']"
-                color="orange"></Label>
-                <Label   textWrap="true" text="    vs    "
-                color="orange"></Label>
-                <Label   textWrap="true" [text]="item['team-2']"
-                color="orange"></Label>
+          <GridLayout rows="*, auto,auto" columns="auto, *" padding="5" borderRadius="10" (tap)="showItem(item.unique_id)">
+            <StackLayout row="0" colSpan="2">
+                <Label class="playing-team p-b-5" textWrap="true" text="{{item['team-1']}} vs {{item['team-2']}}"
+                ></Label>
             </StackLayout>
-            <StackLayout row="1" col="1" backgroundColor="rgba(0,0,0,0.5)" verticalAlignment="center" horizontalAlignment="left" borderRadius="5">
-                <Label padding="0 5" textWrap="true" [text]="item.type"
-                color="orange"></Label>
+            <StackLayout row="1" rowSpan="2" col="0" class="dummy-img" height="60" width="60"></StackLayout>
+            <StackLayout row="1" col="1" >
+                <Label class="cricket-type p-l-5" textWrap="true" [text]="item.type"
+                ></Label>
             </StackLayout>
-            <StackLayout row="2" col="1" backgroundColor="rgba(0,0,0,0.5)" height="40" width="100%" verticalAlignment="center" horizontalAlignment="left" borderRadius="5">
-                <Label padding="0 5"  textWrap="true" [text]="item.date | date :'fullDate'"
-                color="orange"></Label>
-                <Label padding="0 5"  textWrap="true" [text]="item.dateTimeGMT | date : 'mediumTime'"
-                color="orange"></Label>
+            <StackLayout orientation="vertical" row="2" col="1" >
+                <Label class=" p-l-5" textWrap="true" text="{{item.date | date :'fullDate'}} {{item.dateTimeGMT | date : 'mediumTime'}}"
+                ></Label>
+                <Label  *ngIf="item?.winner_team" class="text-winner" textWrap="true" [text]="item?.winner_team"></Label>
             </StackLayout>
-            <StackLayout *ngIf="item?.winner_team" orientation="vertical" marginTop="5"  row="3" col="1" backgroundColor="rgba(0,0,0,0.4)" borderRadius="5">
-                    <Label padding="0 5" textWrap="true" text="Winner Team:"
-                    color="orange"></Label>
-                <Label class="text-winner" padding="0 5" textWrap="true" [text]="item?.winner_team"></Label>
-                </StackLayout>
+            
           </GridLayout>
       </ng-template>
     </ListView>
-    <ActivityIndicator horizontalAlignment="center" verticalAlignment="center"
-    [busy]="processing" class="activity-indicator">
-</ActivityIndicator>
 </StackLayout>

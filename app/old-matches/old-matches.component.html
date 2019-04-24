@@ -3,8 +3,8 @@
     <NavigationButton android.systemIcon="ic_menu_back" title="Back" (tap)="goBack()"></NavigationButton>
 </ActionBar> 
 
-<StackLayout sdkExampleTitle sdkToggleNavButton>
-        <ActivityIndicator horizontalAlignment="center" verticalAlignment="center"
+<StackLayout>
+        <ActivityIndicator  *ngIf="processing" horizontalAlignment="center" verticalAlignment="center"
         [busy]="processing" class="activity-indicator">
         </ActivityIndicator>
     <GridLayout>

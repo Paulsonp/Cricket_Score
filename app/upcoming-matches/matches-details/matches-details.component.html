@@ -1,7 +1,12 @@
 <ActionBar title="MATCH DETAILS">
     <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
 </ActionBar>
-  <TabView androidTabsPosition="bottom"  >
+<StackLayout>
+<ActivityIndicator *ngIf="processing" horizontalAlignment="center" verticalAlignment="center"
+[busy]="processing" class="activity-indicator">
+</ActivityIndicator>
+<Label  *ngIf="processing" class="p-5 text-center" textWrap="true" text="Data Not Available Now"></Label>
+  <TabView androidTabsPosition="bottom" *ngIf="!processing">
       <StackLayout *tabItem="{title: 'Batting'}">
         <ScrollView>
         <StackLayout orientation="vertical">
@@ -25,21 +30,21 @@
                 <StackLayout orientation="vertical" *ngIf="bat_data.title">
                     <FlexboxLayout class="m-5" flexWrap="wrap" justifyContent="space-between">
                         <Label width="25%" class="p-5 font-weight-bold" textWrap="true" text="BatsMan"></Label>
-                        <Label class="list-view p-5 font-weight-bold text-center" text="B"></Label>
-                        <Label class="list-view p-5 font-weight-bold text-center" text="R"></Label>
-                        <Label class="list-view p-5 font-weight-bold text-center" text="SR"></Label>
-                        <Label class="list-view p-5 font-weight-bold text-center" text="4s"></Label>
-                        <Label class="list-view p-5 font-weight-bold text-center" text="6s"></Label>
-                        <Label width="30%" class="list-view p-5 font-weight-bold text-center" text="Out"></Label>
+                        <Label  width="10%" class="list-view p-5 font-weight-bold text-center" text="B"></Label>
+                        <Label width="10%" class="list-view p-5 font-weight-bold text-center" text="R"></Label>
+                        <Label width="10%" class="list-view p-5 font-weight-bold text-center" text="SR"></Label>
+                        <Label width="10%" class="list-view p-5 font-weight-bold text-center" text="4s"></Label>
+                        <Label width="10%" class="list-view p-5 font-weight-bold text-center" text="6s"></Label>
+                        <Label width="25%" class="list-view p-5 font-weight-bold text-center" text="Out"></Label>
                     </FlexboxLayout>
                 <FlexboxLayout class="m-5" flexWrap="wrap" justifyContent="space-between" *ngFor="let data of bat_data.scores">
                     <Label width="25%" class="p-5" textWrap="true" [text]="data ? data.batsman : 'no data'"></Label>
-                    <Label class="list-view p-5 text-center" [text]="data ? data.B : '0'"></Label>
-                    <Label class="list-view p-5 text-center" [text]="data ? data.R : '0'"></Label>
-                    <Label class="list-view p-5 text-center" [text]="data ? data.SR : '0'"></Label>
-                    <Label class="list-view p-5 text-center color-green font-weight-bold" [text]="data['4s']"></Label>
-                    <Label class="list-view p-5 text-center color-blue font-weight-bold" [text]="data['6s']"></Label>
-                    <Label width="15%" class="list-view p-5 text-center " [text]="data ? data.dismissal : '0'"></Label>
+                    <Label width="10%" class="list-view p-5 text-center" [text]="data ? data.B : '0'"></Label>
+                    <Label width="10%" class="list-view p-5 text-center" [text]="data ? data.R : '0'"></Label>
+                    <Label width="10%" class="list-view p-5 text-center" [text]="data ? data.SR : '0'"></Label>
+                    <Label width="10%" class="list-view p-5 text-center color-green font-weight-bold" [text]="data['4s']"></Label>
+                    <Label width="10%" class="list-view p-5 text-center color-blue font-weight-bold" [text]="data['6s']"></Label>
+                    <Label width="25%" class="list-view p-5 text-center " [text]="data ? data.dismissal : '0'"></Label>
                     <Label *ngIf="data.detail" class="list-view p-5 text-center color-wick" textWrap="true" [text]="data ? data.detail : 'no data'"></Label>
                     <Label  width="100%" class="list-view p-5 text-center color-wick" textWrap="true" [text]="data ? data['dismissal-info'] : 'no data'"></Label>
                  </FlexboxLayout>
@@ -123,9 +128,6 @@
           </StackLayout>
           </ScrollView>
     </StackLayout>
-    <ActivityIndicator horizontalAlignment="center" verticalAlignment="center"
-[busy]="processing" class="activity-indicator">
-</ActivityIndicator>
   </TabView>
-
+</StackLayout>
 

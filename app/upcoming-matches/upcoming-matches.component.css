@@ -13,7 +13,20 @@ background-image: url("~/assets/images/new-team-list.png");
 }
 .text-winner{
     font-weight: 800;
-    font-size: 15;
+    font-size: 13;
+    padding-left: 5;
     color: red;
     text-transform: uppercase;
+}
+.playing-team{
+    font-size: 14;
+    font-weight: 700;
+    color: rgb(214, 52, 52);
+    text-transform: uppercase;
+    text-align: center;
+}
+.cricket-type{
+    padding-top: 7;
+    font-size: 15;
+    font-weight: 500;
 }
