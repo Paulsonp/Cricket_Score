@@ -11,6 +11,7 @@ export class UpcomingCricketService {
     upcomingCricketList = API_URL + '/matchCalendar?apikey=' + API_KEY;
     cricketList = API_URL + '/matches?apikey=' + API_KEY;
     oldCricketList = API_URL + '/cricket?apikey=' + API_KEY;
+    liveScore = 'https://www.cricbuzz.com/match-api/livematches.json';
 
     constructor(private http: Http) { }
     getList(): Observable<any> {
@@ -36,5 +37,8 @@ export class UpcomingCricketService {
         let ID = id;
         let cricketPlayerDetails = API_URL + '/playerStats?apikey=' + API_KEY + '&pid=' + ID;
         return this.http.get(cricketPlayerDetails).pipe(map(res => res.json(), error => error.json()));
+      }
+      getLiveScore() {
+        return this.http.get(this.liveScore).pipe(map(res => res.json(), error => error.json()));
       }
 }

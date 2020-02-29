@@ -1,24 +1,51 @@
-.action-bar{
-	background-color:#00bcd4;
-	color: #fff;
-	text-transform: uppercase;
+ActionBar {
+  background-color: #00bcd4;
+  color: #fff;
+  text-transform: uppercase;
 }
-.site-template-image {
-    border-radius: 10;
-    /* border-color: rgb(31, 64, 114);
-    border-width: 1; */
-    margin: auto;
-    width: 100;
-    height: 100;
+.cr-name {
+  font-size: 13;
+  font-weight: bold;
 }
-
-.site-template-title {
-    margin: 0 0 6 0;
-    font-size: 18;
-    color: rgb(31, 64, 114);
+.cr-category {
+  font-size: 12;
+  color: #828282;
 }
-
-.site-template-description {
-    font-size: 12;
-    color: rgb(233, 78, 78);
+.cr-place {
+  font-size: 11;
+  color: #008394;
+}
+.cr-time {
+  color: #00bcd4;
+  font-size: 10;
+}
+.cr-status {
+  color: #be2f24;
+  font-size: 12;
+  font-weight: bold;
+}
+.cr-score {
+  width: 100%;
+  border-color: #008394;
+  border-width: 1;
+}
+.cr-score-text {
+  font-weight: bold;
+}
+.cr-score-line {
+  border-right-color: #008394;
+  border-right-width: 1;
+}
+.cr-next {
+  color: #fff;
+  background: #008394;
+  padding: 5;
+  margin-top: 5;
+  margin-bottom: 5;
+  font-weight: 500;
+}
+.scrol-view .cr-status {
+  color: #0c441d;
+  font-size: 13;
+  font-weight: bold;
 }

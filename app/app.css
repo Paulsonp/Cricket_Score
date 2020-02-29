@@ -9,7 +9,7 @@ For example, the following CSS rule changes the font size of all UI
 components that have the btn class name.
 */
 .btn {
-    font-size: 18;
+  font-size: 18;
 }
 
 /*
@@ -17,25 +17,30 @@ In many cases you may want to use the NativeScript core theme instead
 of writing your own CSS rules. For a full list of class names in the theme
 refer to http://docs.nativescript.org/ui/theme.
 */
-@import '~nativescript-theme-core/css/core.light.css';
+@import "~nativescript-theme-core/css/core.light.css";
 
 /* START CSS ANIMATION */
-     .anim-icons {
-        animation-name: blink;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-    }
-     .anim-text {
-        animation-name: blink;
-        animation-duration: 1.5s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-    }
-    @keyframes blink{
-0%{opacity: 0;}
-50%{opacity: .5;}
-100%{opacity: 1;}
+.anim-icons {
+  animation-name: blink;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.anim-text {
+  animation-name: blink;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* END CSS ANIMATION */
-   

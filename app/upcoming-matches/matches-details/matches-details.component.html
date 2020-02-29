@@ -5,7 +5,7 @@
 <ActivityIndicator *ngIf="processing" horizontalAlignment="center" verticalAlignment="center"
 [busy]="processing" class="activity-indicator">
 </ActivityIndicator>
-<Label  *ngIf="processing" class="p-5 text-center" textWrap="true" text="Data Not Available Now"></Label>
+<Label  *ngIf="processing" class="p-10 text-center" textWrap="true" text="Please Wait..."></Label>
   <TabView androidTabsPosition="bottom" *ngIf="!processing">
       <StackLayout *tabItem="{title: 'Batting'}">
         <ScrollView>
@@ -24,7 +24,7 @@
 <StackLayout class="p-5 tag-box">
     <label text="SCORE CARD" class="text-center font-weight-bold h3"></label>
 </StackLayout>
-<!-- <Label *ngIf="!batting_data.title"class="p-5 text-center" textWrap="true" text="Data Not Available Now"></Label> -->
+<!-- <Label *ngIf="!batting_data.title"class="p-5 text-center" textWrap="true" text="Please Wait..."></Label> -->
             <StackLayout *ngFor="let bat_data of batting_data" >
                 <Label *ngIf="bat_data.title" class="h3 text-uppercase text-left p-l-5 p-t-20 p-b-15 font-weight-bold" textWrap="true" [text]="bat_data ? bat_data.title : 'no data'"></Label>
                 <StackLayout orientation="vertical" *ngIf="bat_data.title">
@@ -56,7 +56,7 @@
       <StackLayout *tabItem="{title: 'Bowling'}">
         <ScrollView>
             <StackLayout orientation="vertical">
-                <!-- <Label *ngIf="!bowling_data.title"class="p-5 text-center" textWrap="true" text="Data Not Available Now"></Label> -->
+                <!-- <Label *ngIf="!bowling_data.title"class="p-5 text-center" textWrap="true" text="Please Wait..."></Label> -->
         <StackLayout *ngFor="let bowl_data of bowling_data">
             <Label *ngIf="bowl_data.title" class="h3 text-uppercase text-center p-t-20 p-b-15 font-weight-bold" textWrap="true" [text]="bowl_data ? bowl_data.title : 'no data'"></Label>
             <StackLayout orientation="vertical">
@@ -102,7 +102,7 @@
                     <Label class="list-view p-5 font-weight-bold" text="Catch"></Label>
                 </FlexboxLayout>
             <FlexboxLayout class="m-5" flexWrap="wrap" justifyContent="space-between" *ngFor="let item of data.scores">
-                <Label width="100%" *ngIf="!item.name" class="p-5 text-center" textWrap="true" text="Data Not Available Now"></Label>
+                <Label width="100%" *ngIf="!item.name" class="p-5 text-center" textWrap="true" text="Please Wait..."></Label>
                 <Label width="25%" class="p-5" textWrap="true" [text]="item ? item.name : 'no data'"></Label>
                 <Label class="list-view p-5 text-center" [text]="item ? item.runout : 'no data'"></Label>
                 <Label class="list-view p-5 text-center" [text]="item ? item.stumped : 'no data'"></Label>
