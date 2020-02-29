@@ -1,6 +1,14 @@
 <StackLayout class="main" verticalAlignment="top">
   <GridLayout rows="auto" columns="*" backgroundColor="#F5F5F5">
-    <Image row="0" col="0" marginTop="40" height="150" stretch="aspectFill" class="card-img" [src]="item.cover"></Image>
+    <Image
+      row="0"
+      col="0"
+      marginTop="40"
+      height="150"
+      stretch="aspectFill"
+      class="card-img"
+      [src]="item.cover"
+    ></Image>
     <FlexboxLayout
       verticalAlignment="top"
       row="0"
@@ -10,7 +18,8 @@
       backgroundColor="#00bcd4"
       height="40"
     >
-    <Label fontSize="15" text="HOME" (tap)="goBack()" class="fa close"> </Label>
+      <Label fontSize="15" text="HOME" (tap)="goBack()" class="fa close">
+      </Label>
       <Label fontSize="15" text="LIVE SCORE" class="fa close"> </Label>
       <StackLayout>
         <Label
@@ -25,7 +34,7 @@
         >
         </Label>
         <Label
-        (tap)="openVideoModal()"
+          (tap)="openVideoModal()"
           verticalAlignment="bottom"
           fontSize="6"
           text="LIVE"
@@ -37,19 +46,30 @@
         </Label>
       </StackLayout>
     </FlexboxLayout>
-    <StackLayout class="tagline m-b-5" opacity=".9" verticalAlignment="bottom" row="0" col="0">
+    <StackLayout
+      class="tagline m-b-5"
+      opacity=".9"
+      verticalAlignment="bottom"
+      row="0"
+      col="0"
+    >
       <Label class="p-l-5" color="#fff" [text]="item.tagline"></Label>
     </StackLayout>
-    <GridLayout #videoModal row="0" rows="auto" backgroundColor="rgba(0,0,0,0.7)">
+    <GridLayout
+      #videoModal
+      row="0"
+      rows="auto"
+      backgroundColor="rgba(0,0,0,0.7)"
+    >
       <!-- Here is the code for video just install  tns plugin add nativescript-videoplayer -->
-      <!-- <VideoPlayer
+      <VideoPlayer
         #vPlayer
         row="0"
         src="https://espnfw-a.akamaihd.net/m/1/87146/65/4474305/Abhay15sec_939483_181.mp4"
         autoplay="true"
         height="190"
       >
-      </VideoPlayer> -->
+      </VideoPlayer>
       <Label
         row="0"
         horizontalAlignment="right"
@@ -61,13 +81,28 @@
       ></Label>
     </GridLayout>
   </GridLayout>
-  <ScrollView  orientation="horizontal">
+  <ScrollView orientation="horizontal">
     <StackLayout orientation="horizontal" class="">
-        <Image class="card-img-thumb" [nsRouterLink]="['/cricketCalender']"
-        pageTransition="slideLeft" src="https://ezsports.tv/wp-content/uploads/2019/01/next-1-800x445.jpg"
-        stretch="aspectFill"></Image>
-      <GridLayout *ngFor="let imageString of item.images; index as i;" rows="auto" columns="*">
-        <Image class="card-img-thumb" (tap)="onClick(i)" row="0" col="0" [src]="imageString" stretch="aspectFill"></Image>
+      <Image
+        class="card-img-thumb"
+        [nsRouterLink]="['/cricketCalender']"
+        pageTransition="slideLeft"
+        src="https://ezsports.tv/wp-content/uploads/2019/01/next-1-800x445.jpg"
+        stretch="aspectFill"
+      ></Image>
+      <GridLayout
+        *ngFor="let imageString of item.images; index as i"
+        rows="auto"
+        columns="*"
+      >
+        <Image
+          class="card-img-thumb"
+          (tap)="onClick(i)"
+          row="0"
+          col="0"
+          [src]="imageString"
+          stretch="aspectFill"
+        ></Image>
       </GridLayout>
     </StackLayout>
   </ScrollView>
